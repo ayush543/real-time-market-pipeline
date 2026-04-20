@@ -10,5 +10,6 @@ CREATE TABLE IF NOT EXISTS raw_market_data (
     source_last_updated TIMESTAMP,
     event_ts TIMESTAMP NOT NULL,
     is_anomaly BOOLEAN DEFAULT FALSE,
-    raw_payload JSONB NOT NULL
+    raw_payload JSONB NOT NULL,
+    inserted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
